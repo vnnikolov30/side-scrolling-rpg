@@ -1,0 +1,76 @@
+[gd_scene load_steps=11 format=3 uid="uid://d1e4ta4qg6k7b"]
+
+[ext_resource type="Texture2D" uid="uid://b5l6bribadfq7" path="res://characters/player/Charge.png" id="1_duvo8"]
+[ext_resource type="Script" uid="uid://k8bis6cmmqv7" path="res://characters/player/fire_ball_impact_effect.gd" id="2_fwcyk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jxbcf"]
+atlas = ExtResource("1_duvo8")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_peqrj"]
+atlas = ExtResource("1_duvo8")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3m0sy"]
+atlas = ExtResource("1_duvo8")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k4n34"]
+atlas = ExtResource("1_duvo8")
+region = Rect2(512, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4bmvs"]
+atlas = ExtResource("1_duvo8")
+region = Rect2(576, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0he05"]
+atlas = ExtResource("1_duvo8")
+region = Rect2(640, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pa3qb"]
+atlas = ExtResource("1_duvo8")
+region = Rect2(704, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7fi13"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jxbcf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_peqrj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3m0sy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k4n34")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4bmvs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0he05")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pa3qb")
+}],
+"loop": false,
+"name": &"impact",
+"speed": 16.0
+}]
+
+[node name="FireBallImpactEffect" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_7fi13")
+animation = &"impact"
+autoplay = "impact"
+frame = 6
+frame_progress = 1.0
+script = ExtResource("2_fwcyk")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.4
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

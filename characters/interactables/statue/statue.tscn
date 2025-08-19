@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://byyi131lcoatk"]
+
+[ext_resource type="Script" uid="uid://bwg06btybna8t" path="res://characters/interactables/statue/statue.gd" id="1_m3lmm"]
+[ext_resource type="Texture2D" uid="uid://ci3fcaxepihxm" path="res://characters/interactables/statue/statue.png" id="1_tdryj"]
+[ext_resource type="PackedScene" uid="uid://drvx0j80tq0qf" path="res://components/interactable_component.tscn" id="3_kpncw"]
+[ext_resource type="PackedScene" uid="uid://dnexiuaf17ht4" path="res://components/interactable_label_component.tscn" id="4_24l6c"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_m3lmm"]
+radius = 38.0
+
+[node name="Statue" type="StaticBody2D"]
+script = ExtResource("1_m3lmm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-5, -37)
+texture = ExtResource("1_tdryj")
+
+[node name="InteractableComponent" parent="." instance=ExtResource("3_kpncw")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableComponent"]
+position = Vector2(0, -37)
+shape = SubResource("CircleShape2D_m3lmm")
+
+[node name="InteractableLabelComponent" parent="." instance=ExtResource("4_24l6c")]
+offset_left = 1.0
+offset_top = -85.0
+offset_right = 1.0
+offset_bottom = -85.0

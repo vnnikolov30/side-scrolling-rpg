@@ -1,0 +1,9 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://byqwr5kbrt4p5"]
+
+[ext_resource type="Texture2D" uid="uid://bei02nagoepfc" path="res://components/ui_sprites/Sprite sheet for Basic Pack.png" id="1_tge16"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ecs4j"]
+texture = ExtResource("1_tge16")
+
+[resource]
+Panel/styles/panel = SubResource("StyleBoxTexture_ecs4j")
