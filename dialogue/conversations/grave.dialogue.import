@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://b8mc8qwdalqns"
+path="res://.godot/imported/grave.dialogue-b3d12a0e706653c4e2e8cffa2a0a1eb3.tres"
+
+[deps]
+
+source_file="res://dialogue/conversations/grave.dialogue"
+dest_files=["res://.godot/imported/grave.dialogue-b3d12a0e706653c4e2e8cffa2a0a1eb3.tres"]
+
+[params]
+
+defaults=true

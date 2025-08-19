@@ -1,9 +1,90 @@
-[gd_resource type="Theme" load_steps=3 format=3 uid="uid://byqwr5kbrt4p5"]
+[gd_resource type="Theme" load_steps=20 format=3 uid="uid://byqwr5kbrt4p5"]
 
 [ext_resource type="Texture2D" uid="uid://bei02nagoepfc" path="res://components/ui_sprites/Sprite sheet for Basic Pack.png" id="1_tge16"]
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_tge16"]
+load_path = "res://.godot/imported/Sprite sheet for Basic Pack.png-cb67a0a5b635911124239ea23f918815.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mlgyr"]
+atlas = SubResource("CompressedTexture2D_tge16")
+region = Rect2(107, 11, 26, 26)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_my13y"]
+texture = SubResource("AtlasTexture_mlgyr")
+region_rect = Rect2(3, 3, 20, 20)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_da7dv"]
+load_path = "res://.godot/imported/Sprite sheet for Basic Pack.png-cb67a0a5b635911124239ea23f918815.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rm2g8"]
+atlas = SubResource("CompressedTexture2D_da7dv")
+region = Rect2(59, 59, 26, 26)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_preor"]
+texture = SubResource("AtlasTexture_rm2g8")
+region_rect = Rect2(3, 3, 20, 20)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ptclq"]
+load_path = "res://.godot/imported/Sprite sheet for Basic Pack.png-cb67a0a5b635911124239ea23f918815.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oammv"]
+atlas = SubResource("CompressedTexture2D_ptclq")
+region = Rect2(59, 59, 26, 26)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0hyyi"]
+texture = SubResource("AtlasTexture_oammv")
+region_rect = Rect2(3, 3, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_61pev"]
+atlas = ExtResource("1_tge16")
+region = Rect2(107, 155, 26, 26)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7dy07"]
+texture = SubResource("AtlasTexture_61pev")
+region_rect = Rect2(3, 0, 20, 23)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7y81l"]
+load_path = "res://.godot/imported/Sprite sheet for Basic Pack.png-cb67a0a5b635911124239ea23f918815.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xk8t2"]
+atlas = SubResource("CompressedTexture2D_7y81l")
+region = Rect2(59, 107, 26, 26)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7koft"]
+texture = SubResource("AtlasTexture_xk8t2")
+region_rect = Rect2(3, 3, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tge16"]
+atlas = ExtResource("1_tge16")
+region = Rect2(275, 212, 90, 25)
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ecs4j"]
-texture = ExtResource("1_tge16")
+texture = SubResource("AtlasTexture_tge16")
+texture_margin_top = 3.59211
+texture_margin_bottom = 4.61842
+region_rect = Rect2(4.46022, 0, 81.079, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xukoe"]
+atlas = ExtResource("1_tge16")
+region = Rect2(275, 212, 90, 25)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mlgyr"]
+texture = SubResource("AtlasTexture_xukoe")
+region_rect = Rect2(0, 0, 90, 25)
 
 [resource]
+Button/styles/disabled = SubResource("StyleBoxTexture_my13y")
+Button/styles/focus = SubResource("StyleBoxTexture_preor")
+Button/styles/hover = SubResource("StyleBoxTexture_0hyyi")
+Button/styles/normal = SubResource("StyleBoxTexture_7dy07")
+Button/styles/pressed = SubResource("StyleBoxTexture_7koft")
+CharacterNameText/base_type = &"RichTextLabel"
+CharacterNameText/font_sizes/normal_font_size = 14
+DialogueText/base_type = &"RichTextLabel"
+DialogueText/font_sizes/normal_font_size = 12
+MarginContainer/constants/margin_bottom = 10
+MarginContainer/constants/margin_left = 10
+MarginContainer/constants/margin_right = 10
+MarginContainer/constants/margin_top = 10
 Panel/styles/panel = SubResource("StyleBoxTexture_ecs4j")
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_mlgyr")
